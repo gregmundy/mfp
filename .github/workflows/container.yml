@@ -1,20 +1,13 @@
 name: deploy-container
+
 on:
   push:
     branches:
       - main
-      - master
-    paths:
-      - 'packages/container/**'
-
-defaults:
-  run:
-    working-directory: packages/container
 
 jobs:
-  build:
+  do_a_thing:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - run: yarn install
